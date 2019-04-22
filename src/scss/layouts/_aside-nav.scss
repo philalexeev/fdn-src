@@ -1,0 +1,241 @@
+.aside__nav {
+  position: fixed;
+  top: 0;
+	right: -313px;
+	display: flex;
+	flex-direction: column;
+  width: 313px;
+  height: 100%;
+  padding: 55px 30px;
+  background-color: $color-white;
+	opacity: 0;
+	z-index: 100;
+	box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.7);
+	transition: all 0.5s ease-in-out;
+	z-index: -1;
+
+	@media screen and (max-height: 940px) and (max-width: 1890px) {
+		top: 50%;
+		left: 50%;
+		flex-wrap: wrap;
+		align-items: stretch;
+		transform: translate(-50%, -50%);
+		height: 600px;
+		width: 676px;
+		z-index: -1;
+	}
+
+	@media screen and (max-height: 940px) and (max-width: 920px) {
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		z-index: -1;
+	}
+}
+
+.aside__nav--open {
+  right: 0;
+	opacity: 1;
+	z-index: 100;
+
+	@media screen and (max-height: 940px) and (max-width: 1890px) {
+		top: 50%;
+		left: 50%;
+		opacity: 1;
+		z-index: 100;
+	}
+
+	@media screen and (max-height: 940px) and (max-width: 920px) {
+		z-index: 100;
+	}
+}
+
+.aside__heading {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $color-dark;
+  text-transform: uppercase;
+}
+
+.aside__menu {
+  margin-bottom: 80px;
+	list-style: none;
+
+	@media screen and (max-height: 940px) and (max-width: 1890px) {
+		width: 45%;
+		margin-bottom: 0;
+		margin-right: 10%;
+	}
+
+	@media screen and (max-height: 940px) and (max-width: 920px) {
+		width: 260px;
+		margin-right: 0;
+		margin-bottom: 80px;
+	}
+}
+
+.aside__item-wrapper {
+	position: relative;
+  font-size: 16px;
+  line-height: 40px;
+  color: $color-grey;
+  text-decoration: none;
+  border-bottom: 1px solid $color-light-grey-3;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-blue;
+	}
+}
+
+.aside__item-complex::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 20px;
+	display: block;
+	width: 0;
+	height: 0;
+	transform: translateY(-50%);
+	transform-origin: 3px center;
+	border: 4px solid $color-light-grey-3;
+	border-color: transparent;
+	border-left: 5px solid $color-light-grey-3;
+	transition: all 0.2s ease-in;
+}
+
+.aside__item {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color: $color-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.aside__item-wrapper--active .aside__item {
+  color: $color-blue;
+}
+
+.aside__item-wrapper--active.aside__item-complex::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.aside__submenu-item {
+  display: block;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 36px;
+  color: $color-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.aside__submenu {
+  display: none;
+  list-style: none;
+}
+
+.aside__contacts {
+	@media screen and (max-height: 940px) and (max-width: 1890px) {
+		width: 45%;
+	}
+
+	@media screen and (max-height: 940px) and (max-width: 920px) {
+		width: 260px;
+	}
+}
+
+.aside__pointer-icon {
+  fill: $color-grey;
+}
+
+.aside__adress {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-grey;
+}
+
+.aside__phone {
+  font-size: 14px;
+  line-height: 28px;
+  color: $color-grey;
+}
+
+.aside__work-time {
+  font-size: 14px;
+  line-height: 28px;
+  color: $color-grey;
+}
+
+.aside__email-wrapper {
+  margin-bottom: 75px;
+}
+
+.aside__email {
+  font-size: 14px;
+  line-height: 28px;
+  color: $color-blue;
+}
+
+.aside__search-wrapper {
+	position: relative;
+
+	@media screen and (max-height: 940px) and (max-width: 920px) {
+		width: 50%;
+	}
+
+	@media screen and (max-height: 940px) and (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.aside__search {
+  width: 100%;
+  padding-left: 13px;
+  padding-right: 30px;
+  font-size: 16px;
+  line-height: 36px;
+  color: $color-grey;
+  border: 1px solid $color-light-grey-3;
+
+  &::placeholder {
+    color: $color-grey;
+  }
+}
+
+.aside__search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $color-grey;
+}
+
+.close-btn__wrapper {
+  position: absolute;
+  top: 55px;
+  right: 30px;
+  border: none;
+  background-color: transparent;
+	cursor: pointer;
+
+	@media screen and (max-height: 940px) and (max-width: 1890px) {
+		top: 30px;
+	}
+}
+
+.close-btn__wrapper:hover .close-btn__icon {
+  fill: $color-blue;
+}

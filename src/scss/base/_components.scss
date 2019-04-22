@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  padding: 18px 23px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--black {
+    color: $color-white;
+    background-color: $color-dark;
+  }
+
+  &--yellow {
+    color: $color-dark;
+    background-color: $color-yellow;
+  }
+
+  &--blue {
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  &:hover {
+    color: $color-dark;
+    background-color: $color-white;
+  }
+}

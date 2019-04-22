@@ -1,0 +1,257 @@
+.features {
+  position: relative;
+  background-color: $color-light-grey;
+  z-index: 10;
+}
+
+.features__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1232px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media screen and (max-width: 1240px) {
+    width: 879px;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 586px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 320px;
+  }
+}
+
+.features__slider {
+  min-height: 293px;
+  list-style: none;
+  min-height: auto;
+}
+
+.features__item {
+  width: 293px;
+  min-height: 293px;
+  background-color: $color-white;
+
+  @media screen and (max-width: 1240px) {
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 8;
+    }
+
+    &:nth-child(7) {
+      order: 7;
+    }
+
+    &:nth-child(8) {
+      order: 6;
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+
+    &:nth-child(5) {
+      order: 6;
+    }
+
+    &:nth-child(6) {
+      order: 8;
+    }
+
+    &:nth-child(7) {
+      order: 7;
+    }
+
+    &:nth-child(8) {
+      order: 5;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    min-height: auto;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 3;
+    }
+
+    &:nth-child(8) {
+      order: 5;
+    }
+  }
+}
+
+.features__title {
+  padding: 30px;
+
+  @media screen and (max-width: 1240px) {
+    width: 586px;
+  }
+
+  @media screen and (max-width: 920px) {
+    width: 293px;
+  }
+}
+
+.features__slider-item {
+  width: 293px;
+  min-height: 293px;
+  padding: 30px;
+
+  @media screen and (max-width: 600px) {
+    min-height: auto;
+    padding-top: 0;
+  }
+}
+
+.features__controls {
+  margin-bottom: 0;
+
+  @media screen and (max-width: 1240px) {
+    width: 293px;
+  }
+
+  @media screen and (max-width: 600px) {
+    min-height: 100px;
+    padding-bottom: 30px;
+  }
+}
+
+.features__section-title {
+  position: relative;
+  padding-bottom: 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: $color-dark;
+  text-transform: uppercase;
+
+  @include line-separator;
+}
+
+.features__item-description {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $color-grey;
+}
+
+.features__item-title {
+  position: relative;
+  padding-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-dark;
+
+  @include line-separator;
+}
+
+.features__image {
+  position: relative;
+  width: 293px;
+  height: 293px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.features__image-item {
+  padding: 0;
+}
+
+.features__image:nth-child(2)::after,
+.features__image:nth-child(4)::after,
+.features__image:nth-child(7)::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 12px solid transparent;
+}
+
+.features__image:nth-child(2)::after {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 12px solid $color-white;
+
+  @media screen and (max-width: 1240px) {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-right-color: transparent; 
+    border-bottom: 12px solid $color-white;
+  }
+}
+
+.features__image:nth-child(4)::after {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 12px solid $color-white;
+}
+
+.features__image:nth-child(7)::after {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 12px solid $color-white;
+
+  @media screen and (max-width: 1240px) {
+    left: auto;
+    right: 0;
+    border-left-color: transparent;
+    border-right-color: $color-white;
+  }
+}

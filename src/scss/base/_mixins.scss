@@ -1,0 +1,25 @@
+@mixin line-separator {
+	&::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 1px;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: $color-dark;
+  }
+}
+
+@mixin line-separator--white {
+	&::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 1px;
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: $color-white;
+  }
+}

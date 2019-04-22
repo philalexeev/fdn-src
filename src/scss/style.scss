@@ -1,0 +1,17 @@
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/normalize';
+@import 'base/global_scaffolding';
+@import 'base/components';
+@import 'base/mixins';
+@import 'base/slick';
+@import 'base/slick-theme';
+
+@import 'layouts/page-header';
+@import 'layouts/features';
+@import 'layouts/price-contact-search';
+@import 'layouts/advantages';
+@import 'layouts/examples';
+@import 'layouts/page-footer';
+@import 'layouts/aside-nav';
+@import 'layouts/company-video__pop-up';
